@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+:root {
+  --background: #222222;
+  --foreground: #ffffff;
+
+  /* AutoWorks brand palette, exact match from Figma designs */
+  --color-brand-dark: #222222;       /* primary dark background */
+  --color-brand-dark-soft: #292929;  /* card & surface background */
+  --color-brand-dark-card: #292929;  /* elevated containers */
+  --color-brand-accent: #dc323f;     /* signature AutoWorks red */
+  --color-brand-accent-dark: #b92330;/* dark red hover */
+  --color-brand-muted: #9e9e9e;      /* secondary text */
+  --color-brand-surface: #292929;    /* card surfaces */
+  --color-brand-border: #333333;     /* borders */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-brand-dark: var(--color-brand-dark);
+  --color-brand-dark-soft: var(--color-brand-dark-soft);
+  --color-brand-dark-card: var(--color-brand-dark-card);
+  --color-brand-accent: var(--color-brand-accent);
+  --color-brand-accent-dark: var(--color-brand-accent-dark);
+  --color-brand-muted: var(--color-brand-muted);
+  --color-brand-surface: var(--color-brand-surface);
+  --color-brand-border: var(--color-brand-border);
+  --font-sans: var(--font-manrope);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Smooth transitions */
+a, button {
+  transition: all 0.2s ease-in-out;
+}
+
